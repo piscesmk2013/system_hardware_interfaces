@@ -28,8 +28,9 @@ aidl_interface {
         ndk: {
             apex_available: [
                 "//apex_available:platform",
-                "com.android.bluetooth.updatable",
+                "com.android.bluetooth",
             ],
+            min_sdk_version: "30",
         },
         java: {
             sdk_version: "28",
@@ -58,11 +59,12 @@ aidl_interface {
             apex_available: [
                 "//apex_available:platform",
                 "com.android.uwb",
+                "com.android.bluetooth",
             ],
+            min_sdk_version: "30",
             vndk: {
                 enabled: true,
             },
-            min_sdk_version: "current", // TODO: Move to 32 once SDK is finalized
         },
     },
 }
