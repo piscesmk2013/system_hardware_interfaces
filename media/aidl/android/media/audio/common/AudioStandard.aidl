@@ -25,6 +25,4 @@ package android.media.audio.common;
 enum AudioStandard {
     NONE = 0,
     EDID = 1,
-    SADB = 2,
-    VSADB = 3,
 }
