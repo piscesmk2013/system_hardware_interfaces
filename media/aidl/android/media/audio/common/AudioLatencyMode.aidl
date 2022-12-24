@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The Android Open Source Project
+ * Copyright 2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package android.media.audio.common;
 
 /**
- * The audio standard that describe audio playback/capture capabilites.
- *
- * {@hide}
+ * The latency mode currently used by the spatializer mixer.
  */
-@Backing(type="int")
+@Backing(type="byte")
 @VintfStability
-enum AudioStandard {
-    NONE = 0,
-    EDID = 1,
-    SADB = 2,
-    VSADB = 3,
+enum AudioLatencyMode {
+    /** No specific constraint on the latency */
+    FREE = 0,
+    /** A relatively low latency compatible with head tracking operation (e.g less than 100ms) */
+    LOW = 1,
 }
